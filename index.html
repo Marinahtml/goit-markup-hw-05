@@ -424,9 +424,72 @@
                     </li>
                 </ul>
             </div>
-        </div>
+            <!-- ==== Main Page ====-->
+            <div class="main-page-btn">
+                <p class="main-page-btn-text">Subscribe</p>
+                <div class="main-page-input-btn">
+                    <input type="text" class="main-page-input" placeholder="E-mail">
+                    <button class="main-page-button">
+                        Subscribe
+                        <svg class="main-page-svg" width="24" height="24">
+                            <use href="./images/icons.svg#icon-Frametelegram"></use>
+                        </svg>
+                    </button>
+                </div>
 
+            </div>
+        </div>
     </footer>
+    <!-- ==== Modal ==== -->
+    <div class="overley is-open">
+        <div class="modal">
+            <button type="button" class="modal-close-button">x</button>
+            <p class="modal-text">Leave your contacts and we will call you back</p>
+            <form class="modal-form" action="">
+                <div class="modal-label-input">
+                    <label class="modal-label" for="user-name">Name</label>
+                    <div class="modal-input-icon">
+                        <input name="modal-input user-name" type="text" class="modal-input" id="user-name"
+                            placeholder="">
+                        <svg class="modal-svg" width="24" height="24">
+                            <use href="./images/icons.svg#icon-person-black"></use>
+                        </svg>
+                    </div>
+                    <label class="modal-label" for="user-phone">Phone</label>
+                    <div class="modal-input-icon">
+                        <input name="modal-input user-phone" type="text" class="modal-input" id="user-phone"
+                            placeholder="">
+                        <svg class="modal-svg" width="24" height="24">
+                            <use href="./images/icons.svg#icon-phone"></use>
+                        </svg>
+                    </div>
+                    <label class="modal-label" for="user-emaile">Email</label>
+                    <div class="modal-input-icon">
+                        <input name="modal-input user-email" type="text" class="modal-input" id="user-emaile"
+                            placeholder="">
+                        <svg class="modal-svg" width="24" height="24">
+                            <use href="./images/icons.svg#icon-email"></use>
+                        </svg>
+                    </div>
+                    <label class="modal-label" for="user-text-input">Comment</label>
+                    <textarea class="modal-input-user-text" name="modal-user-commet" id="user-text-input" required
+                        placeholder="Text input"></textarea>
+                </div>
+                <div class="modal-checkbox">
+                    <input type="checkbox" class="modal-input-checkbox visually-hidden">
+                    <span class="modal-own-checkbox">
+                        <svg class="modal-checkbox-svg" width="10" height="8">
+                            <use href="./images/icons.svg#icon-Vectorgalochka"></use>
+                        </svg>
+                    </span>
+                    <label class="modal-label-checkbox">I accept the terms and conditions of the
+                        <a href="" class="modal-privaci-policy">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="modal-submit-button">Send</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
