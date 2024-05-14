@@ -568,12 +568,19 @@ address {
   border: none;
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
-  height: 40px;
   padding-left: 16px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: transparent;
 }
 
+/* .main-page-input::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+} */
 .main-page-button {
   display: flex;
   border-radius: 4px;
@@ -582,17 +589,19 @@ address {
   height: 40px;
   background: #4d5ae5;
   margin-left: 24px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
 }
 
 .main-page-svg {
   display: flex;
+  align-items: center;
   margin-left: 16px;
-  /* gap: 16px; */
-  margin-top: 8px;
-  margin-left: 24px;
-  margin-bottom: 8px;
 }
 
 /* Modal */
@@ -603,10 +612,11 @@ address {
   z-index: 99999999;
   width: 100%;
   height: 100%;
-  background: rgba(46, 47, 66, 0.4);
+  background-color: rgba(46, 47, 66, 0.4);
   opacity: 0;
   visibility: hidden;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overley.is-open {
@@ -625,6 +635,7 @@ address {
   border-radius: 4px;
   width: 408px;
   min-height: 584px;
+  padding: 72px 24px 24px;
 }
 
 .modal-close-button {
@@ -635,16 +646,24 @@ address {
   right: 24px;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
-  background-color: #e7e9fc;
+  background-color: transparent;
+  line-height: 0;
+  border-radius: 100%;
+  fill: #e7e9fc;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:focus,
 .modal-close-button:hover {
-  background-color: #404bbf;
+  fill: #404bbf;
   color: #fff;
+}
+
+.modal-close-btn-icon {
+  fill: #2e2f42;
 }
 
 .modal-text {
@@ -654,7 +673,7 @@ address {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  margin: 72px 24px 16px 24px;
+  margin: 0 0 16px 0;
 }
 
 .modal-form {
@@ -667,7 +686,6 @@ address {
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-top: 8px;
   margin-bottom: 4px;
 }
 
@@ -690,7 +708,9 @@ address {
 }
 
 .modal-input:focus + .modal-svg {
-  fill: #4d5ae5;
+  background: #404bbf;
+  fill: #f4f4fd;
+  border: none;
 }
 
 .modal-input-user-text {
@@ -699,10 +719,15 @@ address {
   border-radius: 4px;
   width: 100%;
   height: 120px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
   background-color: transparent;
   resize: none;
   padding: 8px 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-input-user-text:focus {
@@ -711,29 +736,26 @@ address {
 }
 
 .modal-input-user-text::placeholder {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-label-input {
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-bottom: 8px;
 }
 
 .modal-svg {
   position: absolute;
   top: 50%;
   left: 16px;
+  fill: #2e2f42;
   transform: translateY(-50%);
 }
 
 .modal-checkbox {
-  padding: 16px 24px;
+  margin-top: 8px;
+  margin-bottom: 24px;
 }
+
 .modal-input-checkbox {
   display: inline-flex;
   margin-left: 8px;
@@ -742,7 +764,9 @@ address {
 }
 
 .modal-input-checkbox:checked + .modal-label-checkbox > .modal-own-checkbox {
-  fill: #404bbf;
+  background: #404bbf;
+  fill: #f4f4fd;
+  border: none;
 }
 
 .modal-own-checkbox {
@@ -755,6 +779,8 @@ address {
   border: 1px solid rgba(46, 47, 66, 0.4);
   cursor: pointer;
   fill: transparent;
+  margin-right: 8px;
+  padding-right: 16px;
 }
 
 .modal-label-checkbox {
@@ -787,13 +813,24 @@ address {
 }
 .modal-submit-button {
   display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
   border-radius: 4px;
   padding: 16px 32px;
   width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
-  margin: 24px;
   margin-left: auto;
   margin-right: auto;
+  border: none;
+}
+
+.modal-submit-button:focus,
+.modal-submit-button:hover {
+  background-color: #404bbf;
 }
