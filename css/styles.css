@@ -754,6 +754,10 @@ address {
   margin-bottom: 8px;
 }
 
+.modal-label-input-comment {
+  margin-bottom: 16px;
+}
+
 .modal-svg {
   position: absolute;
   top: 50%;
